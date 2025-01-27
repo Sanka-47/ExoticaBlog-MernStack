@@ -63,10 +63,7 @@ useRoutes.route("/users/:id").put(async (request, response) => {
   let mongoObject = {
     $set: {
       name: request.body.name,
-      email: request.body.email,
-      password: request.body.password,
-      joinDate: request.body.joinDate,
-      posts: request.body.posts,
+      
     },
   };
   let data = await db
