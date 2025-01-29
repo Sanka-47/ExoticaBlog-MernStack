@@ -41,7 +41,7 @@ useRoutes.route("/users").post(async (request, response) => {
     .findOne({ email: request.body.email });
 
   if (takenEmail) {
-    response.json({ message: "The email is taken " });
+    response.json({ message: "This Email Is Already Registered" });
   } else {
     const hash = await bcrypt.hash(request.body.password, SALT_ROUNDS);
     let mongoObject = {
@@ -53,7 +53,7 @@ useRoutes.route("/users").post(async (request, response) => {
       posts: [],
     };
     let data = await db.collection("users").insertOne(mongoObject);
-    response.json(data);
+    response.json({ message: "User created successfully" });
   }
 });
 
