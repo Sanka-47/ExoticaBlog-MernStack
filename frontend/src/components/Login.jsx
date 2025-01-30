@@ -38,9 +38,15 @@ export function Login({ setView }) {
     e.preventDefault();
     try {
       const response = await verifyUser(user);
+
+     
       if (response) {
+
+
+     
         sessionStorage.setItem("User", response);
         axios.defaults.headers.common["Authorization"] = `Bearer ${response}`;
+
         await Swal.fire({
           title: 'Success!',
           text: 'Login successful',
