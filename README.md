@@ -4,4 +4,4 @@ steps to get it working -
     2.npm install
     3.frontend - npm run dev
     4.backend - npm start 
-.
+
