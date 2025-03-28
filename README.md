@@ -106,6 +106,8 @@
     2.npm install
     3.frontend - npm run dev
     4.backend - npm start 
+    5. .env - MONGO_URI
+            - PORT 
 
 
 
